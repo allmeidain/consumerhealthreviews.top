@@ -1,0 +1,22 @@
+/*
+  Paleta por produto -- SugarReset.
+  Sobrescreve os tokens de cor (:root) de ../reviews.css para refletir a
+  identidade visual real da pagina oficial (https://forsugarreset.com/),
+  mantendo layout/estrutura do MODELO REVIEW intactos (so cores mudam).
+  Tokens extraidos das cores/gradientes reais do CSS Elementor do site
+  oficial (post-18.css), ver data/produtos/sugarreset.json -> theme_tokens.
+  Paleta vermelho/bordo (#C90037, #8F1B25) combina com o rotulo real do
+  frasco (fundo vermelho/bordo com gota de sangue estilizada); CTA dourado
+  (#FFCA43/#D1AE39) extraido do gradiente real do botao principal do site.
+*/
+:root{
+  --navy-1:#C90037;
+  --navy-2:#8F1B25;
+  --testimonial-navy:#6B0E1A;
+  --panel-gray:#FDF0EF;
+  --cta-1:#FFCA43;
+  --cta-2:#D1AE39;
+  --cta-hover-1:#FFDB73;
+  --cta-hover-2:#ED8104;
+  --badge-border:rgba(255,202,67,.6);
+}
