@@ -1,0 +1,438 @@
+/* 
+  Home Page Styles - Consumer Health Reviews
+  Integrates seamlessly with reviews.css tokens
+*/
+
+/* Hero Section */
+.home-hero {
+  background: linear-gradient(135deg, var(--navy-2) 0%, var(--navy-1) 100%);
+  color: #ffffff;
+  padding: 60px 20px 70px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.home-hero::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(251, 191, 36, 0.08) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.home-hero-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.home-hero-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(251, 191, 36, 0.5);
+  color: var(--cta-1);
+  padding: 6px 18px;
+  border-radius: 30px;
+  font-family: var(--font-heading);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.home-hero h1 {
+  font-family: var(--font-brand);
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 0 0 18px;
+  letter-spacing: -0.5px;
+}
+
+.home-hero p.hero-subtitle {
+  font-family: var(--font-heading);
+  font-size: clamp(1.05rem, 2.5vw, 1.25rem);
+  font-weight: 300;
+  line-height: 1.6;
+  color: #e2e8f0;
+  max-width: 780px;
+  margin: 0 auto 30px;
+}
+
+.hero-stats-row {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 25px;
+}
+
+.hero-stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-stat-number {
+  font-family: var(--font-brand);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--cta-1);
+}
+
+.hero-stat-label {
+  font-size: 0.85rem;
+  color: #cbd5e1;
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Category Filter Bar */
+.filter-nav-wrap {
+  background: #ffffff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  padding: 18px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.filter-nav {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  background: var(--panel-gray);
+  border: 1px solid transparent;
+  color: var(--navy-2);
+  padding: 8px 18px;
+  border-radius: 24px;
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.filter-btn:hover {
+  background: #e2e8f0;
+  transform: translateY(-1px);
+}
+
+.filter-btn.active {
+  background: var(--navy-2);
+  color: #ffffff;
+  border-color: var(--navy-2);
+  box-shadow: 0 4px 12px rgba(1, 50, 72, 0.25);
+}
+
+/* Section Containers */
+.home-section {
+  padding: 60px 20px;
+  max-width: var(--maxw);
+  margin: 0 auto;
+}
+
+.section-header-wrap {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.section-tag {
+  color: var(--navy-1);
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.section-title {
+  font-family: var(--font-brand);
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  color: var(--navy-2);
+  margin: 0 0 12px;
+}
+
+.section-desc {
+  font-family: var(--font-body);
+  color: var(--muted);
+  font-size: 1.1rem;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+/* Reviews Cards Grid */
+.reviews-catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.catalog-card {
+  background: #ffffff;
+  border-radius: var(--radius);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
+  border: 1px solid #edf2f7;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  position: relative;
+}
+
+.catalog-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.12);
+  border-color: rgba(251, 191, 36, 0.4);
+}
+
+.card-img-wrap {
+  background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+  padding: 30px 20px;
+  height: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-img-wrap img {
+  max-height: 200px;
+  max-width: 80%;
+  object-fit: contain;
+  transition: transform 0.35s ease;
+}
+
+.catalog-card:hover .card-img-wrap img {
+  transform: scale(1.06);
+}
+
+.card-category-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: var(--navy-2);
+  color: #ffffff;
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 12px;
+  letter-spacing: 0.5px;
+}
+
+.card-rating-badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: rgba(255, 255, 255, 0.95);
+  color: var(--navy-2);
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.card-rating-badge span.star {
+  color: #f59e0b;
+}
+
+.card-content-wrap {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.card-title {
+  font-family: var(--font-brand);
+  font-size: 1.35rem;
+  color: var(--navy-2);
+  margin: 0 0 10px;
+  line-height: 1.3;
+}
+
+.card-title a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.2s ease;
+}
+
+.card-title a:hover {
+  color: var(--navy-1);
+}
+
+.card-summary {
+  font-family: var(--font-text);
+  font-size: 0.95rem;
+  color: #4b5563;
+  line-height: 1.55;
+  margin: 0 0 20px;
+  flex-grow: 1;
+}
+
+.card-features-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+
+.feature-tag {
+  background: #f1f5f9;
+  color: #475569;
+  font-size: 0.78rem;
+  font-family: var(--font-heading);
+  font-weight: 500;
+  padding: 3px 10px;
+  border-radius: 6px;
+}
+
+.card-cta-btn {
+  display: block;
+  text-align: center;
+  background: linear-gradient(180deg, var(--cta-1) 0%, var(--cta-2) 100%);
+  color: #000000;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 14px rgba(251, 191, 36, 0.35);
+  transition: all 0.25s ease;
+}
+
+.card-cta-btn:hover {
+  background: linear-gradient(180deg, var(--cta-hover-1) 0%, var(--cta-hover-2) 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(251, 191, 36, 0.5);
+}
+
+/* Methodology Section */
+.methodology-section-wrap {
+  background: var(--panel-gray);
+  padding: 70px 20px;
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.methodology-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  max-width: var(--maxw);
+  margin: 0 auto;
+}
+
+.methodology-card {
+  background: #ffffff;
+  border-radius: var(--radius);
+  padding: 30px 24px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  border-top: 4px solid var(--navy-1);
+  transition: transform 0.25s ease;
+}
+
+.methodology-card:hover {
+  transform: translateY(-4px);
+}
+
+.methodology-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: rgba(0, 79, 113, 0.08);
+  color: var(--navy-1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 18px;
+}
+
+.methodology-card h3 {
+  font-family: var(--font-brand);
+  font-size: 1.2rem;
+  color: var(--navy-2);
+  margin: 0 0 10px;
+}
+
+.methodology-card p {
+  font-family: var(--font-text);
+  font-size: 0.95rem;
+  color: var(--muted);
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* Trust Banner */
+.trust-banner {
+  background: linear-gradient(135deg, var(--navy-1) 0%, var(--navy-2) 100%);
+  border-radius: var(--radius);
+  padding: 40px 30px;
+  color: #ffffff;
+  text-align: center;
+  max-width: var(--maxw);
+  margin: 60px auto 30px;
+}
+
+.trust-banner h2 {
+  font-family: var(--font-brand);
+  font-size: 1.8rem;
+  margin: 0 0 12px;
+}
+
+.trust-banner p {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  color: #e2e8f0;
+  max-width: 760px;
+  margin: 0 auto 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .home-hero {
+    padding: 40px 15px 50px;
+  }
+  .reviews-catalog-grid {
+    grid-template-columns: 1fr;
+  }
+  .filter-nav {
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding-bottom: 6px;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+  .filter-btn {
+    white-space: nowrap;
+  }
+}
