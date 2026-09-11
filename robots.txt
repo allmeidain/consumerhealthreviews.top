@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://consumerhealthreviews.top/sitemap/sitemap.xml
